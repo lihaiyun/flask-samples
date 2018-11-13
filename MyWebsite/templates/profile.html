@@ -1,0 +1,12 @@
+<head>
+    <title>Profile</title>
+</head>
+
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h1>Hello {{ user.get_name() }}</h1>
+{{ user.get_email() }}
+
+{% endblock %}
