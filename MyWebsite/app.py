@@ -57,6 +57,11 @@ def list():
     return render_template('list.html')
 
 
+@app.route('/map')
+def map():
+    return render_template('map.html')
+
+
 if __name__ == "__main__":
     app.secret_key = os.urandom(12)
     app.run(debug=True)

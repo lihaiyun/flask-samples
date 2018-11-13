@@ -5,8 +5,13 @@
 {% extends "layout.html" %}
 
 {% block body %}
-
-<h1>Hello {{ user.get_name() }}</h1>
-{{ user.get_email() }}
+<div class="container">
+    <h1>Hello {{ user.get_name() }}</h1>
+    {{ user.get_email() }}
+</div>
+<script>
+    var name = '{{user.get_name()}}';
+    console.log('name: ' + name);
+</script>
 
 {% endblock %}

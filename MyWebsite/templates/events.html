@@ -5,18 +5,20 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<h1>Events</h1>
-<div class="row">
-    {% for event in events %}
-        <div class="col-md-4 col-sm-6">
-            <div class="card mb-2">
-                <img class="card-img-top" src="{{event.get_image()}}" alt="image">
-                <div class="card-body">
-                <h5 class="card-title">{{event.get_name()}}</h5>
-                <p class="card-text">{{event.get_time_str()}}</p>
-              </div>
+<div class="container">
+    <h1>Events</h1>
+    <div class="row">
+        {% for event in events %}
+            <div class="col-md-4 col-sm-6">
+                <div class="card mb-2">
+                    <img class="card-img-top" src="{{event.get_image()}}" alt="image">
+                    <div class="card-body">
+                    <h5 class="card-title">{{event.get_name()}}</h5>
+                    <p class="card-text">{{event.get_time_str()}}</p>
+                  </div>
+                </div>
             </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
