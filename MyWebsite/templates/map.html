@@ -11,8 +11,7 @@
 
     <style>
 #map {
-    height: 100%;
-    max-height: 800px;
+    height: 70%;
 }
     </style>
 </head>
@@ -21,8 +20,9 @@
 
 {% block body %}
 
+<div class="container">
 <div id='map'></div>
-
+</div>
 <script>
     // https://leafletjs.com/examples/mobile/
     // https://docs.onemap.sg/maps/
@@ -34,7 +34,7 @@
           maxZoom: 18,
           minZoom: 11,
           //Do not remove this attribution
-          attribution: '<img src="https://docs.onemap.sg/maps/images/oneMap64-01.png" style="height:20px;width:20px;"/> New OneMap | Map data © contributors, <a href="http://SLA.gov.sg">Singapore Land Authority</a>'
+          attribution: '<img src="https://docs.onemap.sg/maps/images/oneMap64-01.png" style="height:20px;width:20px;"/> OneMap <a href="http://SLA.gov.sg">Singapore Land Authority</a>'
     }).addTo(map);
 
     L.marker([1.379059, 103.849832]).addTo(map).bindPopup("School of IT");
