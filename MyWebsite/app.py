@@ -13,7 +13,7 @@ def home():
     return render_template('home.html')
 
 
-@app.route('/login', methods = ['POST', 'GET'])
+@app.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'GET':
         return render_template('login.html')
@@ -50,11 +50,6 @@ def profile():
 def events():
     event_dict = Event.get_dict()
     return render_template('events.html', events=event_dict.values())
-
-
-@app.route('/list')
-def list():
-    return render_template('list.html')
 
 
 @app.route('/map')
